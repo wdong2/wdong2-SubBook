@@ -45,7 +45,6 @@ public class activity_add2 extends AppCompatActivity {
     private EditText comment;
     private Button saveButton;
     private ArrayList<Book> bookList = new ArrayList<>();
-    private ArrayAdapter<Book> adapter;
     private Context context;
     private static final String FILENAME = "wdong2.sav";
 

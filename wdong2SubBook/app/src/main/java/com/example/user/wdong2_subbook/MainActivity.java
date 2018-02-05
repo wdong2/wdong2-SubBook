@@ -40,7 +40,7 @@ import com.google.gson.reflect.TypeToken;
 
 public class MainActivity extends AppCompatActivity {
     private ListView dataList;
-    private android.widget.ArrayAdapter ArrayAdapter;
+    //private android.widget.ArrayAdapter ArrayAdapter;
     private ArrayList<Book> bookList;
     private static final String FILENAME = "wdong2.sav";
     private Button button_add;

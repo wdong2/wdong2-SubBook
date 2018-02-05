@@ -44,8 +44,8 @@ public class activity_edit extends AppCompatActivity {
     private TextView editDate;
     private TextView editCharge;
     private TextView editComment;
-    private  Button editSave;
-    private  Button editDelete;
+    private Button editSave;
+    private Button editDelete;
     private ArrayList<Book> bookList;
     private Book editBook;
     private Book saveBook;
