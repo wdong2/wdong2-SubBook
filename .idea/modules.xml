@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wdong2SubBook.iml" filepath="$PROJECT_DIR$/wdong2SubBook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wdong2-SubBook.iml" filepath="$PROJECT_DIR$/wdong2-SubBook.iml" />
     </modules>
   </component>
 </project>
