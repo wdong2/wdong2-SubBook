@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter your name"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/editDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter date started"
+        android:inputType="datetime"
+        android:lines="1"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/editCharge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter monthly charge"
+        android:inputType="number|numberDecimal"
+        android:lines="1"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/editComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter comment"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/editSave"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="Save"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/editDelete"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="Delete"
+        android:onClick="onClick" />
+
+
+
+</LinearLayout>
