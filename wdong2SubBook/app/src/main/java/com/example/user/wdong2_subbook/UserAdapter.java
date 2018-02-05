@@ -13,7 +13,10 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- * Created by User on 2018/2/4.
+ * author: Wang Dong
+ * version:1.0
+ * Created on 2018/2/4.
+ * source: https://github.com/codepath/android_guides/wiki/Using-an-ArrayAdapter-with-ListView
  */
 
 public class UserAdapter extends ArrayAdapter<Book> {

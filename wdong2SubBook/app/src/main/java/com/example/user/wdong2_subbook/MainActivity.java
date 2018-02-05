@@ -31,15 +31,24 @@ import java.util.Date;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * author: Wang Dong
+ * Main Activity is responsible for display the main interface
+ * version:1.0
+ *
+ */
+
 public class MainActivity extends AppCompatActivity {
     private ListView dataList;
     private android.widget.ArrayAdapter ArrayAdapter;
     private ArrayList<Book> bookList;
     private static final String FILENAME = "wdong2.sav";
-    private String myTitle = String.format("wdong2-SubBook");
     private Button button_add;
     private TextView totalCharge;
     private Context context;
+
+    //source: https://stackoverflow.com/questions/2198410/how-to-change-title-of-activity-in-android
+    private String myTitle = String.format("wdong2-SubBook");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +80,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    /**
+     * loadFromFile
+     * the function loadfromfile use gson to load information from file
+     * @param context
+     */
     private void loadFromFile(Context context) {
         try {
             FileInputStream fis = context.openFileInput(FILENAME);
@@ -89,6 +104,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * onStart
+     * load information from file
+     * find the view of total charge
+     * set text
+     * set adapter
+     */
     protected void onStart() {
         super.onStart();
         //From: http://stackoverflow.com/questions/5683728/convert-java-util-date-to-string
@@ -106,6 +128,11 @@ public class MainActivity extends AppCompatActivity {
         this.dataList.setAdapter(adapter);
     }
 
+    /**
+     * getTotalCharge
+     * @param bookList
+     * @return
+     */
     public String getTotalCharge(ArrayList<Book> bookList){
         double result = 0.0;
         for(int i=0; i<bookList.size(); i++){

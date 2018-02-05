@@ -31,6 +31,14 @@ import java.util.Date;
 
 import static android.view.View.TEXT_ALIGNMENT_CENTER;
 
+
+/**
+ * author: Wang Dong
+ * edit Activity is responsible for display the edit interface
+ * version:1.0
+ *
+ */
+
 public class activity_edit extends AppCompatActivity {
     private TextView editName;
     private TextView editDate;
@@ -141,6 +149,12 @@ public class activity_edit extends AppCompatActivity {
         });
     }
 
+
+    /**
+     * loadFromFile
+     * use gson to load information
+     * @param context
+     */
     private void loadFromFile(Context context) {
         try {
             FileInputStream fis = context.openFileInput(FILENAME);
@@ -159,6 +173,12 @@ public class activity_edit extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * saveInFile
+     * use gson to save in file
+     * @param context
+     */
     private void saveInFile(Context context) {
         try {
             FileOutputStream fos = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
@@ -173,6 +193,14 @@ public class activity_edit extends AppCompatActivity {
         }
     }
 
+    /**
+     * isValidFormat
+     * check if the format is correct or not
+     * @param format
+     * @param value
+     * @return
+     * source: https://stackoverflow.com/questions/20231539/java-check-the-date-format-of-current-string-is-according-to-required-format-or
+     */
     public static boolean isValidFormat(String format, String value) {
         Date date = null;
         try {
@@ -187,6 +215,13 @@ public class activity_edit extends AppCompatActivity {
         return date != null;
     }
 
+    /**
+     * enoughValue
+     * check if the name charge are empty
+     * @param name
+     * @param charge
+     * @return
+     */
     public static boolean enoughValue(String name, String charge){
         if (name.length()==0 || charge.length()==0){
             return false;

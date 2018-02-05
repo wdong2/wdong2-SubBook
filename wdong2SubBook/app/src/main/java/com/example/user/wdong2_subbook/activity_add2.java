@@ -31,6 +31,12 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * author: Wang Dong
+ * add Activity is responsible for display the add interface
+ * version:1.0
+ *
+ */
 public class activity_add2 extends AppCompatActivity {
 
     private EditText name;
@@ -105,7 +111,11 @@ public class activity_add2 extends AppCompatActivity {
         });
     }
 
-
+    /**
+     * loadFromFile
+     * use gson to load information from the file
+     * @param context
+     */
     private void loadFromFile(Context context) {
         try {
             FileInputStream fis = context.openFileInput(FILENAME);
@@ -124,6 +134,12 @@ public class activity_add2 extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * saveInFile
+     * use gson to save the information to file
+     * @param context
+     */
     private void saveInFile(Context context) {
         try {
             FileOutputStream fos = context.openFileOutput(FILENAME, Context.MODE_PRIVATE);
@@ -138,6 +154,14 @@ public class activity_add2 extends AppCompatActivity {
         }
     }
 
+    /**
+     * isValidFormat
+     * check if the format is correct or not
+     * @param format
+     * @param value
+     * @return
+     * source: https://stackoverflow.com/questions/20231539/java-check-the-date-format-of-current-string-is-according-to-required-format-or
+     */
     public static boolean isValidFormat(String format, String value) {
         Date date = null;
         try {
@@ -152,6 +176,13 @@ public class activity_add2 extends AppCompatActivity {
         return date != null;
     }
 
+    /**
+     * enoughValue
+     * check if the name and charge are empty
+     * @param name
+     * @param charge
+     * @return
+     */
     public static boolean enoughValue(String name, String charge){
         if (name.length()==0 || charge.length()==0){
             return false;
